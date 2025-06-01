@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <h1>Rock Paper Scissor Game</h1>
+     <button onclick="playGame('rock')">Rock</button>
+     <button onclick="playGame('paper')" >paper</button>
+     <button onclick="playGame('scissor')">scissor</button>
+     <script>
+          function getcomputerMove(){
+               const randomNumber = Math.random();
+               let computeMove='';
+               if (randomNumber < 1/3){
+                    computeMove = 'rock'
+               }else if (randomNumber <2/3){
+                    computeMove ='paper';
+               }else{
+                    computeMove ='scissor';
+               }
+               return computeMove;
+          }
+          funtion getResult(playMove,computeMove){
+               
+               if (playerMove === computeMove){
+                    return 'Tie.'
+               }else if(
+                   (playerMove === 'rock') && (computeMove === 'scissor')||
+                   (playerMove === 'paper') && (computeMove === 'rock')||
+                   (playerMove === 'scissor') && (computeMove === 'paper')               
+                   ){
+                    return 'You Win.';
+                   }else{
+                    return 'You Loss.';
+                   }
+          }
+          function playGame (playerMove){
+               let computeMove = getcomputerMove();
+               let result = getResult(playerMove,computeMove);
+               alert9(`You picked ${playerMove},computer picked ${computeMove}, ${result}.`);
+          }
+     </script>
+</body>
+</html>
+
+
+          

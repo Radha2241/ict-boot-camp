@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>DOM</title>
+</head>
+<body>
+     <P id="para">Hello World</P>
+
+     <button onclick="click1()">change text</button>
+
+     <script>
+          // console.log(document.body)
+          console.log(document.getElementById("para").innerHTML);
+          function click (){
+               document.getElementById("para").innerHTML ='ICT bootcamp';
+          }
+     </script>
+</body>
+</html>

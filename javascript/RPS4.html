@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+   
+</head>
+
+<body>
+   <h1>Rock✊ Paper📰 Scissor✂️ Games</h1>
+    <button onclick="playGame('rock')">Rock</button>
+
+    <button onclick="playGame('paper')">Paper</button>
+
+    <button onclick="playGame('scissor')">Scissor</button>
+    <p id="res"></p>
+    <p id=":scope"></p>
+<script>
+       function playGame(PlayerMove)
+            let computerMove = getComputerMove();
+            let result = getResult(PlayerMove, computerMove);
+            if( result ==='You Win.'){
+               score.wins = score.wins + 1;
+           }else if (result === 'You Loss.'){
+               score.loss = score.loss + 1;
+            }else if(result === 'Tie.'){
+               score.tie = score.tie + 1;
+               
+          }
+          document.getElementById('res').innerHTML='you picked ${playerMove},computer picked'
+          
+    </script>
+</body>
+
+</html>
